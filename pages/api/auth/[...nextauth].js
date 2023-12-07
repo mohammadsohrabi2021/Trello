@@ -3,8 +3,14 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import User from "@/models/User";
 import { verifyPassword } from "@/utils/auth";
 import connectDB from "@/utils/connectDB";
+import crypto from 'crypto';
 
+// تابع برای ایجاد رشتهٔ تصادفی و امن
+const generateSecureRandom = () => {
+  return crypto.randomBytes(32).toString('hex');
+};
 export const authOptions = {
+  secret: generateSecureRandom(),
     session: { strategy: "jwt" },
     
     providers: [
