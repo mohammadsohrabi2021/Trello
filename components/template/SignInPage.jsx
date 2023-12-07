@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 import { useEffect } from "react";
+import { setCookie } from "nookies";
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,12 +15,13 @@ function SignInPage() {
   }, [status]);
 
   const loginHandler = async () => {
-    const res = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
-
+    // const res = await signIn("credentials", {
+    //   email,
+    //   password,
+    //   redirect: false,
+    // });
+  
+    setCookie(null, "token", email, { path: "/" });
     if (!res.error) router.push("/");
   };
   return (
