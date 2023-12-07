@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { setCookie } from "nookies";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ScaleLoader from "react-spinners/ScaleLoader";
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -57,8 +58,23 @@ function SignInPage() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={loginHandler} className={"registration-button"}>
-        Login
+      <button onClick={loginHandler}disabled={loading} className={"registration-button"}>
+        
+        {loading ? (
+          <>
+            {" "}
+            Login{" "}
+            <ScaleLoader
+              color="#fff"
+              height={20}
+              width={2}
+              radius={1}
+              margin={2}
+            />{" "}
+          </>
+        ) : (
+          "Login"
+        )}
       </button>
       <div className={"have-account"}>
         <p>Create an account?</p>
