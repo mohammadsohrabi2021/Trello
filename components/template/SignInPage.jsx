@@ -15,13 +15,13 @@ function SignInPage() {
   }, [status]);
 
   const loginHandler = async () => {
-    // const res = await signIn("credentials", {
-    //   email,
-    //   password,
-    //   redirect: false,
-    // });
+    const res = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
   
-    setCookie(null, "token", email, { path: "/" });
+    // setCookie(null, "token", email, { path: "/" });
     if (!res.error) router.push("/");
   };
   return (
