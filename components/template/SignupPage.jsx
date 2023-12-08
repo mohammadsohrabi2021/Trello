@@ -30,7 +30,6 @@ function SignupPage() {
       });
 
       const data = await res.json();
-      console.log(data);
 
       if (data.status === "success") {
         toast.success(data.message);
