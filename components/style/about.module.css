@@ -1,0 +1,55 @@
+/* styles/about.module.css */
+.aboutContainer {
+    margin: 20px;
+  }
+  
+  .aboutImage {
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+  }
+  
+  .aboutContainer p {
+    margin-bottom: 16px;
+  }
+  
+  .aboutContainer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .aboutContainer li {
+    margin-bottom: 8px;
+  }
+  .boxContainer{
+    display: flex;
+    flex-direction:column;
+  }
+  .title {
+    font-size: 1rem; /* اندازه بزرگتر برای تیتر اصلی */
+    color: #007bff; /* رنگ آبی برای تیتر اصلی */
+    font-weight: bolder;
+    font-family: sans-serif;
+    text-align: justify;
+    
+  }
+  
+  .emoji {
+    line-height: 30px;
+    font-size: 1rem; /* اندازه بزرگتر برای ایموجی‌ها */
+    margin-right: 0.5rem; /* حاشیه راست برای جدا کردن ایموجی از متن */
+    font-weight: bolder;
+    font-family: sans-serif;
+  }
+  .boxPersenalContainer{
+display: flex;
+justify-content: space-between;
+
+  }
+  .boxPersenalTextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  
