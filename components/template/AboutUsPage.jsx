@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "../style/about.module.css";
-import sohrabi from "./../../assets/images/107153.JPG";
+import sohrabi from "./../../assets/images/sohrabi.png";
 
 function AboutUsPage() {
   return (
@@ -24,10 +24,10 @@ function AboutUsPage() {
         <p>
           <span className={styles.emoji}>🚀 Welcome to Our World of Code!</span>
           <br />
-          We're not just a team; we're a bunch of tech enthusiasts, passionate
+          {`We're not just a team; we're a bunch of tech enthusiasts, passionate
           coders, and creative problem solvers! Our journey revolves around the
           fascinating realm of technology, where every line of code is a step
-          towards innovation.
+          towards innovation.`}
         </p>
         <p>
           <span className={styles.emoji}>Who Are We?</span>
@@ -40,18 +40,18 @@ function AboutUsPage() {
         <p>
           <span className={styles.emoji}>What Defines Us?</span>
           <br />
-          In our world, challenges are opportunities, bugs are puzzles, and
+         {` In our world, challenges are opportunities, bugs are puzzles, and
           every project is a canvas waiting for the strokes of creativity. We
           don't just write code; we craft digital experiences that leave a
-          lasting impression.
+          lasting impression.`}
         </p>
         <p>
           <span className={styles.emoji}>Our Approach: Tech with a Heart</span>
           <br />
-          Behind the screens and lines of code, there's a team with a heart for
+         {` Behind the screens and lines of code, there's a team with a heart for
           innovation. We believe in making technology accessible, enjoyable, and
           impactful. Our approach is not just about writing flawless code but
-          creating solutions that resonate with users.
+          creating solutions that resonate with users.`}
         </p>
         <p>
           Join us on this exciting journey through the digital landscape, where
