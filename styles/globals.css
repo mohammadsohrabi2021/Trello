@@ -231,13 +231,15 @@ button {
 .home-page {
   display: flex;
   justify-content: space-between;
+  overflow-x: auto;  /* افزودن اسکرول افقی */
 }
 
 .home-page div {
   background-color: #fff;
   margin: 5px;
   border-radius: 5px;
-  flex-grow: 1;
+  flex-shrink: 0; /* تا از عرض دلخواه‌ای کم نشود */
+  min-width: 280px; /* حداقل عرض هر باکس */
 }
 
 .home-page p {
