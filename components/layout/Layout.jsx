@@ -19,6 +19,9 @@ function Layout({ children }) {
   const muneHandler = () => {
     setMune(!mune);
   };
+  const handleClose=()=>{
+    setMune(false)
+  }
   const { status } = useSession();
 
   const logOutHandler = () => {
@@ -60,17 +63,21 @@ function Layout({ children }) {
           <aside>
             <p>Welcome 👋</p>
             <ul>
-              <li>
+              <li onClick={handleClose}>
                 <VscListSelection />
                 <Link href="/">Todos</Link>
               </li>
-              <li>
+              <li onClick={handleClose}>
                 <BiMessageSquareAdd />
                 <Link href="/add-todo">Add Todo</Link>
               </li>
-              <li>
+              <li onClick={handleClose}>
                 <RxDashboard />
                 <Link href="/profile">Profile</Link>
+              </li>
+              <li onClick={handleClose}>
+                <RxDashboard />
+                <Link href="/about-us">AboutUs</Link>
               </li>
             </ul>
           </aside>
@@ -79,19 +86,23 @@ function Layout({ children }) {
        <aside style={{ zIndex: 99, position: "fixed", top: "70px",bottom:'0', width: "60%" }}>
        <p>Welcome 👋</p>
        <ul>
-         <li>
-           <VscListSelection />
-           <Link href="/">Todos</Link>
-         </li>
-         <li>
-           <BiMessageSquareAdd />
-           <Link href="/add-todo">Add Todo</Link>
-         </li>
-         <li>
-           <RxDashboard />
-           <Link href="/profile">Profile</Link>
-         </li>
-       </ul>
+              <li onClick={handleClose}>
+                <VscListSelection />
+                <Link href="/">Todos</Link>
+              </li>
+              <li onClick={handleClose}>
+                <BiMessageSquareAdd />
+                <Link href="/add-todo">Add Todo</Link>
+              </li>
+              <li onClick={handleClose}>
+                <RxDashboard />
+                <Link href="/profile">Profile</Link>
+              </li>
+              <li onClick={handleClose}>
+                <RxDashboard />
+                <Link href="/about-us">AboutUs</Link>
+              </li>
+            </ul>
      </aside>
         ) : null}
         <section style={{ overflowX: "auto", width: "50%" }}>
